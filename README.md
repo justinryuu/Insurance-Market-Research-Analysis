@@ -46,7 +46,7 @@ It is evident in this analysis so far that the maximum disability benefit stated
 ## Lost Wage Benefits
 [Lost Wage Benefits are paid out after seven days of missed work due to total or partial disability](https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp). The employer files a worker’s compensation claim, and the claim, if approved, will be paid out by the employer’s insurance company. If the claim is approved, payments begin 18 days after the date of injury, or within 10 days after the employer was made aware of the injury, whichever is later. During this waiting period and the period leading up to the Lost Wages claim, a claimant can apply for and receive disability benefits; however the received disability benefits will be deducted from the Lost Wages award if the case is resolved in their favour. Rather than a set maximum as in the case of the disability benefit, the maximum weekly benefit for Lost Wages is adjusted periodically. [The New York Workers’ Compensation Board’s Schedule of the Maximum Weekly Benefit](https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp) is as follows (As of March 2022):
 <p align="center">
-  <img src="images/Figure_2.png" width="40%" height="40%">
+  <img src="images/Figure_2.png" width="30%" height="30%">
 </p>
 
 The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
@@ -115,7 +115,7 @@ There might not be any novel conclusions resulting from this pie chart, since it
 A more useful analysis could be to examine whether different characteristics of a claim or claimant have an effect on the value of their payout. To do this, we will utilize a multiple linear regression model that will determine the effects of gender, age at injury, and district have on the payout, which we define as the average weekly wage divided by 2 (NY’s calculation for the disability benefit).
 
 <p align="center">
-  <img src="images/Figure_9.png" width="60%" height="60%">
+  <img src="images/Figure_9.png" width="50%" height="50%">
 </p>
 
 *Note: The variable that checks for male gender (Gender_M) and the variable that checks whether the claim was filed in Syracuse (District.Name_SYRACUSE) were removed as a limitation of the method used to implement these variables for regression. In order to make our results statistically significant, one variable from each of these categories had to be removed. This is called the [Dummy Variable Trap, and can be read about further here.](https://www.learndatasci.com/glossary/dummy-variable-trap/)*
