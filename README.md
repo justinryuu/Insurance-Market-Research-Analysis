@@ -44,7 +44,7 @@ It is evident in this analysis so far that the maximum disability benefit stated
 ## Lost Wage Benefits
 [Lost Wage Benefits are paid out after seven days of missed work due to total or partial disability](https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp). The employer files a worker’s compensation claim, and the claim, if approved, will be paid out by the employer’s insurance company. If the claim is approved, payments begin 18 days after the date of injury, or within 10 days after the employer was made aware of the injury, whichever is later. During this waiting period and the period leading up to the Lost Wages claim, a claimant can apply for and receive disability benefits; however the received disability benefits will be deducted from the Lost Wages award if the case is resolved in their favour. Rather than a set maximum as in the case of the disability benefit, the maximum weekly benefit for Lost Wages is adjusted periodically. [The New York Workers’ Compensation Board’s Schedule of the Maximum Weekly Benefit](https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp) is as follows (As of March 2022):
 
-<img src="images/Figure_2.png" width="40%" height="40%">
+<img src="images/Figure_2.png" width="20%" height="20%">
 
 The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
 
