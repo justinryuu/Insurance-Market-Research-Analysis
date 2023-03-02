@@ -115,7 +115,7 @@ There might not be any novel conclusions resulting from this pie chart, since it
 A more useful analysis could be to examine whether different characteristics of a claim or claimant have an effect on the value of their payout. To do this, we will utilize a multiple linear regression model that will determine the effects of gender, age at injury, and district have on the payout, which we define as the average weekly wage divided by 2 (NY’s calculation for the disability benefit).
 
 <p align="center">
-  <img src="images/Figure_9.png" width="40%" height="40%">
+  <img src="images/Figure_9.png" width="60%" height="60%">
 </p>
 
 *Note: The variable that checks for male gender (Gender_M) and the variable that checks whether the claim was filed in Syracuse (District.Name_SYRACUSE) were removed as a limitation of the method used to implement these variables for regression. In order to make our results statistically significant, one variable from each of these categories had to be removed. This is called the [Dummy Variable Trap, and can be read about further here.](https://www.learndatasci.com/glossary/dummy-variable-trap/)*
