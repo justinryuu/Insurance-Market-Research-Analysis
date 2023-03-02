@@ -34,4 +34,6 @@ beyond), which amounts to 1,326,412 unique claims. The analysis will be conducte
 The wage used to calculate total disability benefit rates for most claimants is defined as 1/52 of the Injured Worker’s average annual earnings, based on the prior year’s payroll data. Disability Benefits are typically paid out by a private insurer, either from individual or company insurance.
 Below are the histograms of the calculated disability benefits for male and female claimants according to the formula used by the NY Workers’ Compensation board, which is calculated as half the weekly wage of the claimant.
 
+<img src="images/Figure_1.png" width="80%" height="80%">
+
 
