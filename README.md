@@ -82,3 +82,38 @@ This chart shows that claimants in the age ranges 35-49 and 50-65 file the large
 
 ### Claims by Gender
 <img src="images/Figure_7.png" width="80%" height="80%">
+The pie chart shows that men file approximately 23.2% more claims than women. Similar conclusions can be made from this pie chart:
+1. Men might be filing more claims than women because they make up a larger proportion of the workforce. This could possibly be true, since the labor force participation rate for women is 56.6%, and for men 68.3% as of February 2022 according to the [U.S. Department of Labor’s Women’s Bureau](https://www.dol.gov/agencies/wb/data/widget).
+2. This can also be interpreted as simply that men file more claims than women, and this could play a part in an insurance carrier’s evaluation of risk. An insurer could have valid reason to impose higher premiums for men seeking workers’ compensation insurance simply because men appear to be significantly more likely to file claims.
+
+### Claims Filed by District
+<img src="images/Figure_8.png" width="80%" height="80%">
+There might not be any novel conclusions resulting from this pie chart, since it is reasonable to assume that the large proportion attributed to NYC is simply due to its much larger relative population. However, this information could be useful as a simple demographic illustration.
+
+## Regression Analysis on the Relationship Between Claim Characteristics and Payout
+A more useful analysis could be to examine whether different characteristics of a claim or claimant have an effect on the value of their payout. To do this, we will utilize a multiple linear regression model that will determine the effects of gender, age at injury, and district have on the payout, which we define as the average weekly wage divided by 2 (NY’s calculation for the disability benefit).
+<img src="images/Figure_9.png" width="80%" height="80%">
+Note: The variable that checks for male gender (Gender_M) and the variable that checks whether the claim was filed in Syracuse (District.Name_SYRACUSE) were removed as a limitation of the method used to implement these variables for regression. In order to make our results statistically significant, one variable from each of these categories had to be removed. This is called the [Dummy Variable Trap, and can be read about further here.](https://www.learndatasci.com/glossary/dummy-variable-trap/)
+We want to observe the Beta column, the values of which describe the extent to which each characteristic has on the average payout. For example, a one-year increase in the age of the claimant has the effect of increasing the average payout by 3.4 dollars, or $3.40.
+Based on this interpretation, we can make some very useful observations.
+### Gender
+The Beta for the Female variable Gender_F is -111, meaning that is a claimant is Female, their payout can be expected to be $111 less on average.
+### Age
+As mentioned above, a one-year increase in the age of the claimant has the effect of increasing the average payout by $3.40.
+### District
+The effect of each district on the payout can be seen in the above table of betas, however some districts of particular interest are Rochester, Binghamton, NYC, and Hauppauge. Binghamton and Rochester both have negative betas, which mean that on average, we can actually expect the payout to be $33 and $36 dollars less when a claim is filed in these districts, respectively.
+NYC and Hauppauge have the highest betas, interestingly with Hauppauge being the highest by a significant margin. This might be a result of higher household incomes in Hauppauge compared to incomes in NYC; [According to the United States Census Bureau,](https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork,hauppaugecdpnewyork/PST045221) the median household income from 2016-2020 in Hauppauge was $120,422 (in 2020 dollars), whereas the median household income in NYC was $67,046. In either case, we can conclude that claims filed in NYC and Hauppauge have the strongest effect in making the average payout for a claim higher. This is most likely due to the higher average income in these districts and that payouts are calculated as a function of income.
+
+## Results and Conclusions
+The analysis of Disability Benefits in New York state revealed a significant “Benefit Gap” caused by the maximum weekly benefit limit of $170 when the weekly benefit calculated according to the NY Workers’ Compensation Board suggested a level of compensation significantly higher for both genders.
+The formula used to calculate Lost Wage Benefits involves a “% of disability based on medical evidence” term that is very difficult to objectively valuate. Rather than simulating the disability classification process, this report calculated different payouts depending on the level of disability of a hypothetical claimant.
+Similar to Disability Benefits, Lost Wage Benefits have weekly maximums but are instead adjusted yearly. Average Lost Wage Benefits in New York did not demonstrate a “Benefit Gap” as in the case of Disability Benefits due to these maximums, however the difference between the average lost wage benefit in the case of Total disability (intended to illustrate the upper extreme of payouts) and the government-imposed maximum has been growing over recent years. This means that insurance providers might have to provide significantly higher payouts in rare cases before the weekly maximum prevents them from paying any more. This suggests that less common but highly expensive claims now carry relatively more risk.
+Demographic analyses were conducted on the number of claims filed by Age Group, Gender, and District. Workers in age ranges 35-49 and 50-65 filed the most claims, Male workers filed comparatively more claims than Female workers, and the most claims were filed in the NYC district. It is important to consider the composition of the labor force in interpreting these results; there is a possibility that these age ranges, Male workers, and workers located in NYC comprise the largest proportion of the labor force. It is possible that there are simply more claims filed under these characteristics as a result.
+A multiple linear regression analysis was used in order to formally measure the extent to which different claim characteristics had an effect on the average payout. Payout was defined as the average weekly earnings of a claimant divided by 2, which is the Workers’ Compensation Board’s calculation for weekly disability benefits. Through an examination of the Beta coefficients of each characteristic several observations were made:
+1. Female claimants had an average payout that was $111 lower than Male claimants.
+2. Age had a slight positive effect on increasing the average payout.
+3. On average, claims filed in Binghamton and Rochester resulted in payouts $33 and $36 lower than the
+average payout.
+4. On average, claims filed in NYC and Hauppauge resulted in payouts $96 and $138 higher than the
+average payout. This is likely due to the relatively higher household incomes enjoyed in these districts
+compared to others.
