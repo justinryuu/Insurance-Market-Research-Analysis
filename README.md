@@ -46,7 +46,7 @@ It is evident in this analysis so far that the maximum disability benefit stated
 ## Lost Wage Benefits
 [Lost Wage Benefits are paid out after seven days of missed work due to total or partial disability](https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp). The employer files a worker’s compensation claim, and the claim, if approved, will be paid out by the employer’s insurance company. If the claim is approved, payments begin 18 days after the date of injury, or within 10 days after the employer was made aware of the injury, whichever is later. During this waiting period and the period leading up to the Lost Wages claim, a claimant can apply for and receive disability benefits; however the received disability benefits will be deducted from the Lost Wages award if the case is resolved in their favour. Rather than a set maximum as in the case of the disability benefit, the maximum weekly benefit for Lost Wages is adjusted periodically. [The New York Workers’ Compensation Board’s Schedule of the Maximum Weekly Benefit](https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp) is as follows (As of March 2022):
 <p align="center">
-  <img src="images/Figure_2.png" width="30%" height="30%">
+  <img src="images/Figure_2.png" width="40%" height="40%">
 </p>
 
 The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
@@ -60,7 +60,7 @@ Average weekly wage is a simple metric to consider, and can be easily retrieved 
 The Workers’ Compensation Board categorizes degrees of disability into four classifications: Total (100%), Marked (75%), Moderate (50%), and Mild (25%). Rather than simulating the classification process itself (which is not possible in the scope of this report), we will determine the average weekly Lost Wage benefits for a series of hypothetical workers designated in each respective disability category.
 
 <p align="center">
-  <img src="images/Figure_4.png" width="40%" height="40%">
+  <img src="images/Figure_4.png" width="50%" height="50%">
 </p>
 
 The table above describes the average weekly Lost Wage Benefit payout for male and female claimants for each disability classification, according to the previously stated formula. Note that these averages are not calculated based on actual observed data for disability classifications, so they do not accurately reflect the frequency of such classifications. Instead, these values are the weekly benefits given that the hypothetical applicant has been classified in either of the four categories.
@@ -84,7 +84,7 @@ This section of the report will consist of a demographic analysis on our dataset
 Below is a pie chart of the different proportions of claims filed by age group:
 
 <p align="center">
-  <img src="images/Figure_6.png" width="40%" height="40%">
+  <img src="images/Figure_6.png" width="50%" height="50%">
 </p>
 
 The chart reports that claimants aged 18-24 filed 3.8% of claims, ages 25-34 filed 17.8%, ages 35-49 filed 35.8%, ages 50-65 filed 37.8%, and ages 65 and above filed 4.8%.
