@@ -43,12 +43,15 @@ It is evident in this analysis so far that the maximum disability benefit stated
 
 ## Lost Wage Benefits
 [Lost Wage Benefits are paid out after seven days of missed work due to total or partial disability](https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp). The employer files a worker’s compensation claim, and the claim, if approved, will be paid out by the employer’s insurance company. If the claim is approved, payments begin 18 days after the date of injury, or within 10 days after the employer was made aware of the injury, whichever is later. During this waiting period and the period leading up to the Lost Wages claim, a claimant can apply for and receive disability benefits; however the received disability benefits will be deducted from the Lost Wages award if the case is resolved in their favour. Rather than a set maximum as in the case of the disability benefit, the maximum weekly benefit for Lost Wages is adjusted periodically. [The New York Workers’ Compensation Board’s Schedule of the Maximum Weekly Benefit](https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp) is as follows (As of March 2022):
-
-<img src="images/Figure_2.png" width="20%" height="20%">
+<p align="center">
+  <img src="images/Figure_2.png" width="40%" height="40%">
+</p>
 
 The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
 
-<img src="images/Figure_3.png" width="70%" height="70%">
+<p align="center">
+  <img src="images/Figure_3.png" width="70%" height="70%">
+</p>
 
 Average weekly wage is a simple metric to consider, and can be easily retrieved from a dataset like the one we are using for the analysis. However, the other important part to this formula - the percentage of disability based on medical evidence - is much harder to obtain information on, or to even quantify.
 [An article by Dr. Bruce A. Barron of the University of Rochester](https://www.aafp.org/pubs/afp/issues/2001/1101/p1579.html) describes the issues surrounding disability classification for New York Workers’ Compensation. Barron states that “the disability certification process can at times be quite contentious because of the differences among legal, administrative, socialand cultural definitions of disability”, and despite this, that “most family physicians receive little education and training on these topics”. It seems that the process of disability certification is thereby extremely subjective, so we will try observing different outcomes of the process instead in order to proceed with our benefit calculation formula.
@@ -57,9 +60,11 @@ The Workers’ Compensation Board categorizes degrees of disability into four cl
 <img src="images/Figure_4.png" width="70%" height="70%">
 
 The table above describes the average weekly Lost Wage Benefit payout for male and female claimants for each disability classification, according to the previously stated formula. Note that these averages are not calculated based on actual observed data for disability classifications, so they do not accurately reflect the frequency of such classifications. Instead, these values are the weekly benefits given that the hypothetical applicant has been classified in either of the four categories.
+
 Our analysis of New York’s Disability Benefits revealed that there is a significant amount of income that workers forfeit due to the imposed maximum Disability Benefit of $170 per week. To try and identify whether such a gap appears due to the maximum Lost Wages Benefit as well, we will compare the average payouts for Totally disabled workers (whose payouts are highest) to the maximums for each period according to the schedule.
 
 <img src="images/Figure_5.png" width="80%" height="80%">
+
 *Note: The period July 1, 2021 - June 30, 2022 was omitted due to a lack of observations; this period only
 contained three.*
 
@@ -82,16 +87,19 @@ This chart shows that claimants in the age ranges 35-49 and 50-65 file the large
 
 ### Claims by Gender
 <img src="images/Figure_7.png" width="40%" height="40%">
+
 The pie chart shows that men file approximately 23.2% more claims than women. Similar conclusions can be made from this pie chart:
 1. Men might be filing more claims than women because they make up a larger proportion of the workforce. This could possibly be true, since the labor force participation rate for women is 56.6%, and for men 68.3% as of February 2022 according to the [U.S. Department of Labor’s Women’s Bureau](https://www.dol.gov/agencies/wb/data/widget).
 2. This can also be interpreted as simply that men file more claims than women, and this could play a part in an insurance carrier’s evaluation of risk. An insurer could have valid reason to impose higher premiums for men seeking workers’ compensation insurance simply because men appear to be significantly more likely to file claims.
 
 ### Claims Filed by District
 <img src="images/Figure_8.png" width="40%" height="40%">
+
 There might not be any novel conclusions resulting from this pie chart, since it is reasonable to assume that the large proportion attributed to NYC is simply due to its much larger relative population. However, this information could be useful as a simple demographic illustration.
 
 ## Regression Analysis on the Relationship Between Claim Characteristics and Payout
 A more useful analysis could be to examine whether different characteristics of a claim or claimant have an effect on the value of their payout. To do this, we will utilize a multiple linear regression model that will determine the effects of gender, age at injury, and district have on the payout, which we define as the average weekly wage divided by 2 (NY’s calculation for the disability benefit).
+
 <img src="images/Figure_9.png" width="40%" height="40%">
 
 *Note: The variable that checks for male gender (Gender_M) and the variable that checks whether the claim was filed in Syracuse (District.Name_SYRACUSE) were removed as a limitation of the method used to implement these variables for regression. In order to make our results statistically significant, one variable from each of these categories had to be removed. This is called the [Dummy Variable Trap, and can be read about further here.](https://www.learndatasci.com/glossary/dummy-variable-trap/)*
