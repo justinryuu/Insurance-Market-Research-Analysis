@@ -33,7 +33,9 @@ beyond), which amounts to 1,326,412 unique claims. The analysis will be conducte
 The wage used to calculate total disability benefit rates for most claimants is defined as 1/52 of the Injured Worker’s average annual earnings, based on the prior year’s payroll data. Disability Benefits are typically paid out by a private insurer, either from individual or company insurance.
 Below are the histograms of the calculated disability benefits for male and female claimants according to the formula used by the NY Workers’ Compensation board, which is calculated as half the weekly wage of the claimant.
 
-<img src="images/Figure 1.png" width="80%" height="80%">
+<p align="center">
+  <img src="images/Figure 1.png" width="80%" height="80%">
+</p>
 
 We can immediately notice a significant discrepancy between the $170 maximum benefit set by the Workers’ Compensation Board and the average calculated weekly benefit. It turns out that according to the disability benefit formula (where benefit = half of the weekly wage), male claimants qualify for an average benefit of $557.41, and female claimants qualify for an average benefit of $467.06. This means that due to the $170 imposed maximum, claimants filing for disability are only receiving approximately a third of what they ought to receive according to NY’s definition of the disability benefit rate. This gap is approximately $387.41 for male claimants, and $297.06 for female claimants.
 
