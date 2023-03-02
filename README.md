@@ -81,4 +81,4 @@ This chart shows that claimants in the age ranges 35-49 and 50-65 file the large
 2. More interestingly, if these two groups do not comprise the largest proportion of the workforce yet still file the most claims, this means that workers aged 35-49 and 50-65 simply have a higher propensity to file claims. This result has useful implications on risk; if an individual purchasing insurance belongs to either of these age groups, they could be subject to higher premiums in order to cover the higher level of risk they carry.
 
 ### Claims by Gender
-
+<img src="images/Figure_7.png" width="80%" height="80%">
