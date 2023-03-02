@@ -1,5 +1,9 @@
 # New York Workers’ Compensation Market Analysis
 
+<p align="center">
+  <img src="images/banner.jpg" width="100%" height="100%">
+</p>
+
 ## Abstract
 The analysis of Disability Benefits in New York state revealed a significant “Benefit Gap” caused by themaximum weekly benefit limit of $170 when the weekly benefit calculated according to the NY Workers’ Compensation Board suggested a level of compensation significantly higher for both genders.
 
