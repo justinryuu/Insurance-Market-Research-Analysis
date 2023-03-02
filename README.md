@@ -1,5 +1,4 @@
 # New York Workers’ Compensation Market Analysis
-## Justin Lyu for Insurtech Advisors LLC
 
 ## Abstract
 The analysis of Disability Benefits in New York state revealed a significant “Benefit Gap” caused by themaximum weekly benefit limit of $170 when the weekly benefit calculated according to the NY Workers’ Compensation Board suggested a level of compensation significantly higher for both genders.
@@ -36,4 +35,50 @@ Below are the histograms of the calculated disability benefits for male and fema
 
 <img src="images/Figure 1.png" width="80%" height="80%">
 
+We can immediately notice a significant discrepancy between the $170 maximum benefit set by the Workers’ Compensation Board and the average calculated weekly benefit. It turns out that according to the disability benefit formula (where benefit = half of the weekly wage), male claimants qualify for an average benefit of $557.41, and female claimants qualify for an average benefit of $467.06. This means that due to the $170 imposed maximum, claimants filing for disability are only receiving approximately a third of what they ought to receive according to NY’s definition of the disability benefit rate. This gap is approximately $387.41 for male claimants, and $297.06 for female claimants.
+
+This discrepancy is further elucidated when considering the fact that the calculated disability benefits are half the weekly earnings of the claimant. The average weekly wage for male claimants is $1114.82 and for females $934.13; this means that due to the $170 maximum, male claimants are actually receiving only around 15% of their weekly income through disability benefits, and female claimants approximately 18%.
+
+It is evident in this analysis so far that the maximum disability benefit stated by the NY Workers’ Compensation Board is likely not enough for most claimants, and it is hence likely that claimants are in need of better compensation. Based on this evidence it seems that there would be demand for an insurance product that would aim to supplement these lost benefits.
+
+## Lost Wage Benefits
+[Lost Wage Benefits are paid out after seven days of missed work due to total or partial disability](https://www.wcb.ny.gov/content/main/Workers/LostWageBenefits.jsp). The employer files a worker’s compensation claim, and the claim, if approved, will be paid out by the employer’s insurance company. If the claim is approved, payments begin 18 days after the date of injury, or within 10 days after the employer was made aware of the injury, whichever is later. During this waiting period and the period leading up to the Lost Wages claim, a claimant can apply for and receive disability benefits; however the received disability benefits will be deducted from the Lost Wages award if the case is resolved in their favour. Rather than a set maximum as in the case of the disability benefit, the maximum weekly benefit for Lost Wages is adjusted periodically. [The New York Workers’ Compensation Board’s Schedule of the Maximum Weekly Benefit](https://www.wcb.ny.gov/content/main/Workers/ScheduleMaxWeeklyBenefit.jsp) is as follows (As of March 2022):
+
+<img src="images/Figure_2.png" width="80%" height="80%">
+
+The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
+
+<img src="images/Figure_3.png" width="80%" height="80%">
+
+Average weekly wage is a simple metric to consider, and can be easily retrieved from a dataset like the one we are using for the analysis. However, the other important part to this formula - the percentage of disability based on medical evidence - is much harder to obtain information on, or to even quantify.
+[An article by Dr. Bruce A. Barron of the University of Rochester](https://www.aafp.org/pubs/afp/issues/2001/1101/p1579.html) describes the issues surrounding disability classification for New York Workers’ Compensation. Barron states that “the disability certification process can at times be quite contentious because of the differences among legal, administrative, socialand cultural definitions of disability”, and despite this, that “most family physicians receive little education and training on these topics”. It seems that the process of disability certification is thereby extremely subjective, so we will try observing different outcomes of the process instead in order to proceed with our benefit calculation formula.
+The Workers’ Compensation Board categorizes degrees of disability into four classifications: Total (100%), Marked (75%), Moderate (50%), and Mild (25%). Rather than simulating the classification process itself (which is not possible in the scope of this report), we will determine the average weekly Lost Wage benefits for a series of hypothetical workers designated in each respective disability category.
+
+<img src="images/Figure_4.png" width="80%" height="80%">
+
+The table above describes the average weekly Lost Wage Benefit payout for male and female claimants for each disability classification, according to the previously stated formula. Note that these averages are not calculated based on actual observed data for disability classifications, so they do not accurately reflect the frequency of such classifications. Instead, these values are the weekly benefits given that the hypothetical applicant has been classified in either of the four categories.
+Our analysis of New York’s Disability Benefits revealed that there is a significant amount of income that workers forfeit due to the imposed maximum Disability Benefit of $170 per week. To try and identify whether such a gap appears due to the maximum Lost Wages Benefit as well, we will compare the average payouts for Totally disabled workers (whose payouts are highest) to the maximums for each period according to the schedule.
+
+<img src="images/Figure_5.png" width="80%" height="80%">
+*Note: The period July 1, 2021 - June 30, 2022 was omitted due to a lack of observations; this period only
+contained three.*
+
+The payout gap caused by the imposed maximum benefit does not seem to pose an issue in the case of Lost Wages, as illustrated by the positive Difference calculations in the rightmost column, which computes the difference between the maximum and the average benefit for Totally disabled claimants.
+However, the difference between New York’s weekly maximum benefit and the average weekly benefit paid for Lost Wages (in the case of total disability) has on average increased over the years. This could mean that an insurance provider in the Workers’ Compensation market might expect to pay out a greater sum of weekly benefits on average before the government-imposed maximum prevents them from having to pay further. A claim demanding a payout significantly higher than average might have to be fully paid nowadays, whereas the payout of such a claim five years ago would have been limited by that year’s maximum benefit schedule.
+
+## Demographic Analysis
+This section of the report will consist of a demographic analysis on our dataset of Workers’ Compensation claims.
+
+### Claims by Age
+Below is a pie chart of the different proportions of claims filed by age group:
+
+<img src="images/Figure_6.png" width="80%" height="80%">
+
+The chart reports that claimants aged 18-24 filed 3.8% of claims, ages 25-34 filed 17.8%, ages 35-49 filed 35.8%, ages 50-65 filed 37.8%, and ages 65 and above filed 4.8%.
+This chart shows that claimants in the age ranges 35-49 and 50-65 file the largest proportion of claims, with claimants aged 50-65 filing the most over all groups. This result has two potential interpretations:
+
+1. These two groups might be filing the most claims simply because they comprise the largest proportion of the workforce itself. However this result seems unlikely based on the [U.S. Bureau of Labor Statistics’ report](https://www.bls.gov/emp/graphics/labor-force-share-by-age-group.htm) that the age group 55 to 64 comprised only 17% of the labor force in 2020.
+2. More interestingly, if these two groups do not comprise the largest proportion of the workforce yet still file the most claims, this means that workers aged 35-49 and 50-65 simply have a higher propensity to file claims. This result has useful implications on risk; if an individual purchasing insurance belongs to either of these age groups, they could be subject to higher premiums in order to cover the higher level of risk they carry.
+
+### Claims by Gender
 
