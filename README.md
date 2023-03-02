@@ -48,13 +48,13 @@ It is evident in this analysis so far that the maximum disability benefit stated
 
 The formula by which the maximum weekly Lost Wage Benefit is calculated is as follows:
 
-<img src="images/Figure_3.png" width="50%" height="50%">
+<img src="images/Figure_3.png" width="70%" height="70%">
 
 Average weekly wage is a simple metric to consider, and can be easily retrieved from a dataset like the one we are using for the analysis. However, the other important part to this formula - the percentage of disability based on medical evidence - is much harder to obtain information on, or to even quantify.
 [An article by Dr. Bruce A. Barron of the University of Rochester](https://www.aafp.org/pubs/afp/issues/2001/1101/p1579.html) describes the issues surrounding disability classification for New York Workers’ Compensation. Barron states that “the disability certification process can at times be quite contentious because of the differences among legal, administrative, socialand cultural definitions of disability”, and despite this, that “most family physicians receive little education and training on these topics”. It seems that the process of disability certification is thereby extremely subjective, so we will try observing different outcomes of the process instead in order to proceed with our benefit calculation formula.
 The Workers’ Compensation Board categorizes degrees of disability into four classifications: Total (100%), Marked (75%), Moderate (50%), and Mild (25%). Rather than simulating the classification process itself (which is not possible in the scope of this report), we will determine the average weekly Lost Wage benefits for a series of hypothetical workers designated in each respective disability category.
 
-<img src="images/Figure_4.png" width="40%" height="40%">
+<img src="images/Figure_4.png" width="70%" height="70%">
 
 The table above describes the average weekly Lost Wage Benefit payout for male and female claimants for each disability classification, according to the previously stated formula. Note that these averages are not calculated based on actual observed data for disability classifications, so they do not accurately reflect the frequency of such classifications. Instead, these values are the weekly benefits given that the hypothetical applicant has been classified in either of the four categories.
 Our analysis of New York’s Disability Benefits revealed that there is a significant amount of income that workers forfeit due to the imposed maximum Disability Benefit of $170 per week. To try and identify whether such a gap appears due to the maximum Lost Wages Benefit as well, we will compare the average payouts for Totally disabled workers (whose payouts are highest) to the maximums for each period according to the schedule.
